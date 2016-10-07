@@ -1,0 +1,91 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <head>
+        <title>Create Account</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:700italic' rel='stylesheet' type='text/css'/>
+        <style>
+        	@font-face { font-family: Ailerons; src: url('Ailerons-Typeface.otf'); }
+		html { 
+			
+			background: url(delivery.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			
+		}
+		body{
+			background: rgba(0,0,0,0.4);
+			align:center;
+		}
+		
+		
+		
+		
+		
+		input {
+			font-family: 'Raleway', sans-serif;
+			border: 1px solid #999;
+			border-radius:30px;
+			font-size:1.2em;
+			-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+		}
+    </style>
+    </head>
+    <body background="delivery.jpg">
+
+    <h1>Create a New Account</h1>
+    
+    <f:view>
+        <h:form id="create">            
+            <h:panelGrid columns="3" border="0">
+                Username: <h:inputText id="name" 
+                                       requiredMessage="*"
+                                       value="#{login.name}"
+                                       required="true"/>
+                          <h:message for="create:name" style="color: red"/>
+                Password: <h:inputSecret id="password"    
+                                         requiredMessage="*"
+                                         value="#{login.password}"
+                                         required="true"/>
+                          <h:message for="create:password" style="color: red"/>
+                           Phone no: <h:inputText id="Phoneno"       
+                                         requiredMessage="*"
+                                         value="#{login.phoneno}"
+                                         required="true"/>  
+                            <h:message for="create:Phoneno" style="color: red"/>
+                           Email: <h:inputText id="email"       
+                                         requiredMessage="*"
+                                         value="#{login.email}"
+                                         required="true"/>  
+                            <h:message for="create:email" style="color: red"/>
+               
+                          
+<!--           
+
+Password (verify): <h:inputSecret id="passwordv"   
+                                                  requiredMessage="*"
+                                                  value="#{usermanager.passwordv}"
+                                                  required="true"/>
+                                   <h:message for="create:passwordv" style="color: red"/>-->
+            </h:panelGrid>
+            <h:commandButton id="submit" 
+                             value="Create"
+                             action="#{login.createUser}"/>
+            <h:messages style="color: red" globalOnly="true"/>
+        </h:form>
+    </f:view>
+    
+    </body>
+</html>

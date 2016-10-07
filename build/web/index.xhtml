@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+
+ Optional theme 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+
+ Latest compiled and minified JavaScript 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        
+    </h:head>
+    <h:body >
+        <body background="./1.jpg">
+        <div class="container">
+            <h1>Sign up</h1>
+            <form method="post" action="StudentReg">
+                <input type="hidden" name="id" value="${alumno.id}"/>
+                <div class="form-group" >                
+                    <label for="name"> 
+                        User Name
+                    </label>
+                    <input id="name"   class="form-control" name="name" type="text" placeholder="Enter your Name" required="true"/>
+                </div>
+                <div class="form-group" >                
+                    <label for="name"> 
+                        Password
+                    </label>
+                    <input id="Password"   class="form-control" name="password" type="password" placeholder="Enter your Name" required="true"/>
+                </div>
+                <div class="form-group" >                
+                    <label for="name"> 
+                        Phone Number
+                    </label>
+                    <input id="Phone Number"   class="form-control" name="phoneno" type="text" placeholder="Enter your Number" required="true"/>
+                </div>
+                <div  class="form-group">                
+                    <label for="email">
+                        Email
+                    </label>
+                    <input id="email"  class="form-control" name="email" type="email" placeholder="Enter your Email" required="true"/>
+                </div>
+                <div class="checkbox">
+                    Sex:
+                    <label for="sex">
+                        <input type="radio"   value="M" name="sex" id="sex" />
+                        Man
+                        </label>
+                    
+                    
+
+                    <label for="sex">
+                        <input type="radio"  value="F" name="sex" id="Sex" />
+                        Woman
+                    </label>                
+                  
+
+                </div>
+
+                <div>
+                    <input type="submit" value="Register" class="btn btn-primary"/>
+                   
+                </div>
+
+            </form>
+             </div>
+    </body>
+    </h:body>
+</html>
+
